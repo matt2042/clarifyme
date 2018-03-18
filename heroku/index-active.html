@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+pre {
+    font-size: 10px;
+    border: none;
+    margin-top:15px;
+    margin-left: 50px;
+    background-color: white;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.accordion {
+    background-color: white;
+    margin-left: 25px;
+    color: #009AAF;
+    cursor: pointer;
+    padding: 0px;
+    border: none;
+    width: auto;
+    text-align: left;
+    outline: 0px;
+    outline-color: white;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #eee;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.normalButton {
+    background-color: #eee;
+    font-size: 20px;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    margin: 25px;
+}
+
+.normalButton:hover {
+    background-color: #ddd;
+}
+
+.clarifyMeButton {
+    background-color: #F0ADA2;
+    font-size: 20px;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    margin: 25px;
+}
+
+.clarifyMeButton:hover {
+    background-color: rgb(248, 158, 144);
+}
+
+.accordion:after {
+    background-color: white;
+    content: '\002B';
+    color: #eee;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0px;
+    margin-left: 1px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.section {
+    background-color:white;
+    color: #444;
+    cursor: pointer;
+    padding: 3px;
+    width: auto;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+</style>
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <br>
+        <br>
+        <div class="row">
+                <div class="col-md-4" class="img-thumbnail img-responsive"><img src="logo.jpg" class="img-rounded" height="200"> </div>
+                <div class="col-md-4">
+                        <h2>Reiseversicherung - CSS Versicherung</h2>
+                        <h3>Allgemeine Versicherungsbedingungen (AVB)</h3>
+                        <h3>Ausgabe 04.2016</h3>
+                </div>
+        </div>
+    
+    </div>
+
+    <div class="row">
+    <div class="col-md-8"> 
+        <h3 class="section">1. Teil Gemeinsame Bedingungen</h3>
+
+        <button class="accordion">Art. 1   Versicherte Personen</button>
+        <div class="panel">
+        <ul style="list-style-type:none">
+        <li/>Der Versicherungsschutz gilt gem&auml;ss den nachfolgenden Bedingungen f&uuml;r Personen, die ihren zivilrechtlichen Wohnsitz in der Schweiz haben.
+        <li/>1.1   Vertragstyp Einzelperson
+        Der Versicherungsnehmer als Einzelperson.
+        <li/>1.2   Vertragstyp Zweipersonenhaushalt
+        Der Versicherungsnehmer und eine zweite Person, welche mit dem Versicherungsnehmer in Hausgemeinschaft lebt oder als Wochenaufenthalter regelm&auml;ssig in den gemeinsamen Haushalt zur&uuml;ckkehrt.
+        <li/>1.3   Vertragstyp Mehrpersonenhaushalt
+        Der Versicherungsnehmer und folgende mit ihm in Hausgemeinschaft lebende oder als Wochenaufenthalter re- gelm&auml;ssig in den gemeinsamen Haushalt zur&uuml;ckkehrende Personen:
+        <li/>a) Ehegatte oder die mit dem Versicherungsnehmer zusammenlebende Person, wie zum Beispiel Konkubinatspartner
+        <li/>b) unm&uuml;ndige Personen
+        <li/>c) m&uuml;ndige Kinder, auch Adoptiv-, Pege- und Stiefkinder
+        versicherter Personen
+        <li/>d) weitere, nachweislich im Haushalt lebende Personen
+        <li/>e) unm&uuml;ndige Kinder von versicherten Personen, die nicht
+        mit dem Versicherungsnehmer in Hausgemeinschaft leben, sofern sie mit ihm unterwegs sind
+        </ul>
+        </div>
+
+        <button class="accordion">Art. 2   Versicherungsumfang</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Der Vertrag beinhaltet nach Wahl den folgenden Versicherungsschutz:
+                <li/>- Heilungskosten
+                <li/>- Personen-Assistance
+                <li/>- Ausland-Rechtsschutz - Reisegep&auml;ck
+                <li/>- Annullierungskosten
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 3   Beginn und Ende der Kurzfristversicherung</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>(Vertr&auml;ge mit einer Laufzeit bis maximal 31 Tage)
+                <li/>Der Versicherungsschutz gilt ab Abreisedatum und erlischt nach Ablauf der gew&auml;hlten Vertragsdauer. Die Ver- sicherungsdeckung wird nur gew&auml;hrt, sofern die Zahlung der geschuldeten Pr&auml;mie nachweislich vor Abreise erfolgte, respektive die Zahlung sp&auml;testens am 2. Bankarbeitstag nach Abreise bei der CSS eingetro en ist.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 4   Beginn und Ende der Jahresversicherung</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Beginn und Ende sind in der Police aufgef&uuml;hrt. Die Versicherung verl&auml;ngert sich jeweils stillschweigend um ein Jahr, wenn sie nicht gem&auml;ss Artikel 5 gek&uuml;ndigt wird.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 5   Aufl&ouml;sung der Jahresversicherungen</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>5.1   Bei Ablauf
+                <li/>Der Versicherungsnehmer oder die CSS haben das Recht, den Vertrag unter Ber&uuml;cksichtigung einer 1-monatigen K&uuml;ndigungsfrist per Ablaufdatum in Schriftform zu k&uuml;ndigen. 
+                <li/>5.2   Im Schadenfall
+                <li/>Nach jedem Leistungsfall, f&uuml;r den die CSS Leistungen erbringt, kann der betro ene Vertragsteil oder der gesamte Vertrag gek&uuml;ndigt werden:
+                <li/>a) Vom Versicherungsnehmer innert 14 Tage, nachdem er
+                von der Leistungsauszahlung bzw. bei Leistungen aus der Ausland-Rechtsschutz-Versicherung von der Erledigung des Falles Kenntnis erhalten hat. Die Deckung erlischt mit dem Eintre en der K&uuml;ndigung bei der CSS. Die K&uuml;ndigung hat in Schriftform zu erfolgen.
+                <li/>b) Von der CSS sp&auml;testens bei der Leistungsauszahlung bzw. bei Leistungen aus der Ausland-Rechtsschutz-Versicherung bei Mitteilung der Fallerledigung. Die Deckung erlischt 14 Tage nach Eintre en der K&uuml;ndigung beim Versicherungsnehmer.
+                <li/>5.3   Bei Verlegung des Wohnsitzes ins Ausland
+                <li/>Wohnsitzverlegungen ins Ausland sind der CSS umgehend zu melden. Als Wohnsitzverlegung gilt die Abmeldung bei den zust&auml;ndigen Beh&ouml;rden. Die Reiseversicherung erlischt per Abmeldedatum.          
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 6   &Ouml;rtlicher Geltungsbereich</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>a) Die Heilungskosten- und Ausland-Rechtsschutz-Versicherung ist auf Reisen ausserhalb der Grenzen der Schweiz auf der ganzen Welt g&uuml;ltig.
+                <li/>b) Bei Flugreisen tritt die Heilungskosten-, und AuslandRechtsschutz-Versicherung jeweils beim Passieren des Schweizer Flughafen-Zolls in Kraft bzw. bei der R&uuml;ckkehr ausser Kraft.
+                <li/>c) Die Personen-Assistance, Reisegep&auml;ck und Annullierungskosten-Versicherung gilt weltweit auf Reisen.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 7   &Auml;nderung der Pr&auml;mientarife bei Jahresvertr&auml;gen</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>7.1   Die CSS kann die Pr&auml;mientarife anpassen. Pr&auml;mientarif&auml;nderungen werden sp&auml;testens 30 Tage vor Ende des Versicherungsjahres mitgeteilt.
+                <li/>7.2   Ist der Versicherungsnehmer mit der Pr&auml;mien&auml;nderung nicht einverstanden, kann er den betre enden Vertragsteil oder den gesamten Vertrag auf Ende des laufenden Versicherungsjahres k&uuml;ndigen. Die K&uuml;ndigung muss sp&auml;testens am letzten Arbeitstag des Versicherungsjahres bei der CSS eintre en. Die K&uuml;ndigung hat in Schriftform zu erfolgen.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 8   Pr&auml;mienr&uuml;ckerstattung bei Jahresvertr&auml;gen</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Wird die Versicherung vorzeitig aus einem gesetzlichen oder vertraglichen Grunde aufgehoben, so erstattet die CSS die nicht verbrauchte Pr&auml;mie grunds&auml;tzlich zur&uuml;ck. Keine R&uuml;ckerstattung erfolgt, wenn der Versicherungsnehmer die Versicherung im Schadenfall k&uuml;ndigt und diese weniger als 12 Monate in Kraft war.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 9   Notfallzentrale</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>9.1   Bei pl&ouml;tzlicher Erkrankung, Unfall, unvorhergesehener Niederkunft im In- und Ausland oder Rechtsschutzbed&uuml;rfnis im Ausland, welche eine Hospitalisation, Hilfsmassnahmen oder Rechtsschutz erforderlich machen, ist unverz&uuml;glich die von der CSS bekanntgegebene Notfallnummer der Notfallzentrale zu benachrichtigen. Diese steht w&auml;hrend 24 Stunden (auch an Sonn- und Feiertagen) zur Verf&uuml;gung. Die Notfallzentrale gibt Auskunft &uuml;ber das zweckm&auml;ssige Vorgehen und organisiert die erforderliche Hilfe.
+                <li/>9.2   Die notwendigen Hilfestellungen gem&auml;ss Art. 9.1 werden von der Notfallzentrale der CSS organisiert, angeordnet bzw. durchgef&uuml;hrt und verg&uuml;tet.
+                <li/>9.3   F&uuml;r Massnahmen gem&auml;ss Art. 9.1, welche nicht durch die Notfallzentrale der CSS angeordnet worden sind, erstattet die CSS nur diejenigen Kosten zur&uuml;ck, die auch bei der Durchf&uuml;hrung der Hilfsmassnahmen durch die Notfallzentrale entstanden w&auml;ren.  
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 10   Obliegenheiten und Pflichten im Schadenfall</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>10.1   Allgemeine Pflichten
+                <li/>a) Der Versicherungsnehmer oder die anspruchsberech-
+                tigte Person ist verp ichtet, die CSS unverz&uuml;glich &uuml;ber den Eintritt eines Schadenfalles zu unterrichten und der CSS alle f&uuml;r die Beurteilung des Schadenfalles erforderlichen Ausk&uuml;nfte und Unterlagen wie Arztatteste, amtliche Todeserkl&auml;rungen, Polizeirapporte, Originalrechnungen, Buchungsbest&auml;tigungen usw. unaufgefordert zur Verf&uuml;gung zu stellen.
+                <li/>b) Bei Krankheit oder Unfall hat die versicherte Person sofort f&uuml;r fachgem&auml;sse &auml;rztliche P ege zu sorgen und die Notfallzentrale zu benachrichtigen. Die versicherte Person hat die behandelnden &auml;rzte gegen&uuml;ber der CSS sowie allen Gesellschaften, welche bei der Abkl&auml;rung des Schadenfalles im Auftrag der CSS t&auml;tig sind, von ihrer Schweigep icht zu entbinden.
+                <li/>c) Sind Rechnungsdetails ungen&uuml;gend und werden die erg&auml;nzenden Ausk&uuml;nfte auf Verlangen der CSS nicht zur Verf&uuml;gung gestellt, so besteht kein Anspruch auf Leistung.
+                <li/>d) Die versicherte Person ist verp ichtet, die CSS &uuml;ber s&auml;mtliche Leistungen Dritter (z.B. von anderen Versicherern) zu informieren. 
+                <li/>e) Die CSS kann auf Kosten der versicherten Person eine beglaubigte &uuml;bersetzung in eine schweizerische Landessprache oder in englischer Sprache verlangen.
+                <li/>10.2   Werden durch Leistungen der Personen-Assistance-Versicherung Bahn- oder Flugbillette, die die versicherte Person vor Eintritt des Versicherungsfalles bezahlt hat, nicht ben&ouml;tigt und durch Transportunternehmen oder Dritte r&uuml;ckverg&uuml;tet, ist dies der CSS zu melden; dasselbe tri t zu, wenn die Billette verkauft wurden oder f&uuml;r den sp&auml;teren Gebrauch aufgehoben werden. Allf&auml;llige Entsch&auml;digungen nicht ben&uuml;tzter Billette werden an die Leistungen der CSS angerechnet. Bei Missachtung der Meldep icht kann die CSS einen nach p ichtgem&auml;ssem Ermessen festgelegten Betrag von der versicherten Person zur&uuml;ckfordern bzw. verrechnen.    
+                <li/>10.3   Bei der Rechtsschutz-Versicherung ist die versicherte Person in dringenden F&auml;llen (schwere Verletzungen, Festnahmen, Beschlagnahmung des Fahrzeuges) verpflichtet, die Notfallnummer der Notfallzentrale der CSS in der Schweiz anzurufen. Bei Bedarf wird das Einschreiten eines lokalen Anwalts veranlasst.
+                <li/>10.4   
+                <li/>a) Bei der Reisegep&auml;ck-Versicherung hat die versicherte Person im Falle von Diebstahl und Beraubung unverz&uuml;glich vor Ort die Polizeibeh&ouml;rde und gegebenenfalls die Transportunternehmung zu benachrichtigen.
+                <li/>b) Bei Besch&auml;digung von Reisegep&auml;ck muss die versicherte Person auf Verlangen der CSS die besch&auml;digten Gegenst&auml;nde zur Verf&uuml;gung stellen.
+                <li/>10.5   
+                <li/>Bei Eintritt eines Ereignisses oder eines Leidens, das eine Leistung der CSS aus der Annullierungskosten-Versicherung ausl&ouml;sen k&ouml;nnte, sind nebst der CSS unverz&uuml;glich die Buchungsstelle (Reiseb&uuml;ro, Transportunternehmung, Vermieter, usw.) zu benachrichtigen.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 11 Verletzung von Obliegenheiten und Pflichten/
+                Wegfall der Leistungspflicht</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Wenn die versicherte Person Obliegenheiten oder Pfichten schuldhaft verletzt und dadurch den Umfang des Schadens beein usst, kann die CSS die Leistung ablehnen oder k&uuml;rzen. Die Leistungsp icht entf&auml;llt insbesondere, wenn in der Schadenanzeige zwecks T&auml;uschung vors&auml;tzlich unwahre Angaben gemacht oder Tatsachen verschwiegen werden, auch wenn dadurch dem Versicherer kein Nachteil erw&auml;chst.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 12 Anspr&uuml;che gegen&uuml;ber Dritten</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Sofern die CSS aus diesem Vertrag Leistungen erbracht hat, f&uuml;r welche die versicherte Person gegen&uuml;ber Dritten Anspr&uuml;che geltend machen kann, hat die versicherte Person diese Anspr&uuml;che bis zur H&ouml;he der erbrachten Leistungen an die CSS abzutreten. Ausgenommen von dieser Bestimmung bleiben Leistungen aus der HeilungskostenVersicherung. F&uuml;r die Heilungskosten-Versicherung gilt Art. 4 des 2. Teils.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 13 Kostenvorsch&uuml;sse</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Kostenvorsch&uuml;sse bis max. CHF 10 000 sind innert 30 Tagen nach der R&uuml;ckkehr an den Wohnort oder sp&auml;testens 60 Tage nach Auszahlung zur&uuml;ckzubezahlen. Erfolgt innerhalb der genannten Fristen keine R&uuml;ckzahlung, werden der versicherten Person 5% Verzugszins in Rechnung gestellt.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 14 F&auml;lligkeit der Versicherungsleistung, Verj&auml;hrung
+                und Verwirkung</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Die Leistung wird 30 Tage nach dem Datum f&auml;llig, an dem die CSS die zur Feststellung der H&ouml;he des Schadens und ihrer Haftung erforderlichen Unterlagen erhalten hat. Die Forderungen aus diesem Vertrag verj&auml;hren 2 Jahre nach Eintritt der Tatsache, welche die Leistungsp icht begr&uuml;nden. Abgelehnte Entsch&auml;digungsforderungen, die nicht innert 2 Jahren nach Eintritt des Schadenereignisses gerichtlich geltend gemacht werden, sind verwirkt.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 15 Nicht versicherte Ereignisse und Leistungslimiten</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Die Deckungseinschr&auml;nkungen und Leistungslimiten werden bei den jeweiligen Versicherungen (2.-5. Teil) aufgef&uuml;hrt.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 16 Daten</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Die CSS ist berechtigt, den Abschluss der Versicherung an den Makler/Vermittler zu melden (Vorname/Name).
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 17 Gerichtsstand</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Anspr&uuml;che aus diesem Vertrag k&ouml;nnen ausschliesslich am schweizerischen Wohnsitz der versicherten Person oder am Sitz der CSS in Luzern gerichtlich geltend gemacht werden.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 18 Anwendbares Recht</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>Es gelten die Bestimmungen des Bundesgesetzes &uuml;ber den Versicherungsvertrag (VVG) sowie die Bestimmungen &uuml;ber die Rechtsschutzversicherung des Bundesgesetzes betre end die Aufsicht &uuml;ber Versicherungsunternehmen (VAG) und deren Ausf&uuml;hrungsbestimmungen in der Verordnung &uuml;ber die Beaufsichtigung von privaten Versicherungsunternehmen (AVO) in der jeweils aktuellen Fassung.
+            </ul>
+        </div>
+
+        <button class="accordion">Art. 19 Begriffsdfinitionen</button>
+        <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>19.1   Reise
+                <li/>Als Reise gilt ein mehr als ein Tag dauernder Aufenthalt ausserhalb des gew&ouml;hnlichen Wohnortes oder ein Aufenthalt von k&uuml;rzerer Dauer an einem mindestens 30 km vom gew&ouml;hnlichen Wohnort entfernten Ort, unter Ausschluss von Arbeitswegen.
+                <li/>19.2   Pers&ouml;nlich sehr nahestehende Person
+                <li/>a) Familienangeh&ouml;rige, Konkubinatspartner sowie dessen Kinder und Eltern
+                <li/>b) sehr enge Freunde, zu denen intensiver Kontakt besteht
+                <li/>19.3   Elementarereignisse
+                <li/>Hochwasser, &uuml;berschwemmung, Sturm (Wind von mindestens 75 km/h), Hagel, Lawine, Schneedruck, Felssturz, Steinschlag, Erdrutsch, Erdbeben
+                <li/>19.4   &ouml; entliche Verkehrsmittel
+                <li/>F&uuml;r die &ouml; entlichkeit bestimmte und zug&auml;ngliche Verkehrsmittel, die nach Fahrplan verkehren und f&uuml;r die ein Fahrschein zu l&ouml;sen ist.      
+                <li/>19.5   Einfacher Diebstahl
+                <li/>Einfacher Diebstahl ist die unrechtm&auml;ssige Wegnahme einer Sache ohne Anwendung von Gewalt.
+                <li/>19.6   Einbruchdiebstahl
+                Einbruchdiebstahl ist Diebstahl durch T&auml;ter, die gewaltsam in ein Geb&auml;ude oder in den Raum eines Geb&auml;udes eindringen oder darin ein Beh&auml;ltnis aufbrechen. Dem Einbruchdiebstahl gleichgestellt ist Diebstahl durch Aufschliessen mit den richtigen Schl&uuml;sseln oder Codes, sofern sich der T&auml;ter diese durch Einbruchdiebstahl oder Beraubung angeeignet hat. Nicht als Einbruchdiebstahl gilt Diebstahl aus Luft-, Wasseroder Motorfahrzeugen samt Anh&auml;ngern, gleichg&uuml;ltig wo sie sich be nden.
+                <li/>19.7   Beraubung
+                <li/>Beraubung ist Diebstahl unter Androhung oder Anwendung von Gewalt gegen Personen sowie Diebstahl bei Unf&auml;higkeit zum Widerstand infolge von Tod, Ohnmacht oder Unfall. Nicht darunter fallen Taschen- und Trickdiebstahl.
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+            <div class="col-md-8"> 
+    <h3 class="section">2. Teil Allgemeine Versicherungsbedingungen (AVB) f&uuml;r die Heilungskosten-/Personen-Assistance-Versicherung</h3>
+    
+    <button class="accordion">Art. 1 Heilungskosten-Versicherung</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>1.1   Bei Krankheit, Unfall oder unvorhergesehener Niederkunft &uuml;bernimmt die CSS die notfallm&auml;ssigen, nicht durch einen anderen leistungsp ichtigen Versicherer gedeckten Behandlungs- und Spitalkosten zu den am Behandlungsort &uuml;blichen Tarifen (subsidi&auml;re Deckung). Sie bevorschusst die durch diese Versicherer zu deckenden Kosten gem&auml;ss Art. 4.
+            <li/>1.2   Bei Verweigerung einer vertrauens&auml;rztlichen Untersuchung werden keine Leistungen erbracht.
+            <li/>1.3   Zahnbehandlungen sind nur infolge eines Unfalles bis maximal CHF 3000 versichert.
+            <li/>1.4   Leistungsdauer
+            <li/>a) Leistungen werden nur solange erbracht, als ein Heimtransport aus medizinischen Gr&uuml;nden nicht m&ouml;glich oder zumutbar ist.
+            <li/>b) Die Leistungen werden l&auml;ngstens bis 120 Tage ab Erkrankungs- bzw. Unfalldatum erbracht.     
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 2 Personen-Assistance-Versicherung</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>2.1   Wenn eine versicherte Person ernsthaft erkrankt, sich bei einem Unfall schwer verletzt oder stirbt, &uuml;bernimmt die CSS folgende durch die Notfallzentrale der CSS organisierten Leistungen:
+            <li/>a) medizinisch notwendige Rettungsaktionen und Transporte
+            <li/>b) Suchaktionen, die im Hinblick auf eine Rettung oder Bergung der versicherten Person unternommen werden, bis maximal CHF 20 000 pro versicherte Person
+            <li/>c) die Repatriierung an den schweizerischen Wohnort oder in ein schweizerisches Spital bei medizinischer Notwendigkeit
+            <li/>d) die Bergung und &uuml;berf&uuml;hrung der verstorbenen Person aus dem Ausland
+            <li/>e) einen r&uuml;ckzahlbaren Kostenvorschuss bis maximal CHF 10 000, wenn eine versicherte Person im Ausland hospitalisiert werden muss
+            <li/>f) eine Besuchsreise (Transport und Unterkunft ohne Verpflegung) bis max. CHF 3000 f&uuml;r eine der versicherten Person sehr nahestehende Person an das Krankenbett, wenn ein Spitalaufenthalt im Ausland l&auml;nger als 7 Tage dauert oder akute Lebensgefahr besteht
+            <li/>2.2   Zus&auml;tzlich werden bei vorzeitiger oder versp&auml;teter R&uuml;ckreise die Reisemehrkosten f&uuml;r Transport und Unterkunft (ohne Verp egung) bis max. 7 Tage, sowie nachweisbare Kosten f&uuml;r unbedingt notwendige Telefonanrufe, &uuml;bernommen. Die Reisemehrkosten werden in der H&ouml;he von max. CHF 2500 bei der Einzelperson-Versicherung und max. CHF 5000 bei der 2-Personenhaushalt- und Mehrpersonenhaushalt-Versicherung bei folgenden Ereignissen erbracht:
+            <li/>a) wenn eine versicherte Person nach Hause repatriiert wird oder die Reise aus einem der nachfolgend (lit. b bis f) aufgef&uuml;hrten versicherten Gr&uuml;nde abbrechen muss und die versicherte Person die Reise allein fortsetzen m&uuml;sste
+            <li/>b) wenn eine nahestehende Person ernsthaft erkrankt, schwer verletzt wird oder stirbt
+            <li/>c) wenn das Eigentum der versicherten Person an ihrem Wohnort in der Schweiz infolge Diebstahl, Feuer-, Wasser-, Erdbeben- oder Elementarschaden schwer beeintr&auml;chtigt wird und deshalb ihre Anwesenheit zu Hause unerl&auml;sslich ist
+            <li/>d) wenn Streik oder Unruhen aller Art (Gewalt gegen Personen oder Sachen wie beispielsweise von Zusammenrottung, Krawall, Tumult) ausserhalb der Schweiz oder Quarant&auml;ne, Epidemien, Erdbeben, vulkanische Eruptionen oder Elementarereignisse das Leben der versicherten Person gef&auml;hrden oder von o zieller schweizerischer Stelle (Eidgen&ouml;ssisches Departement f&uuml;r ausw&auml;rtige Angelegenheiten/EDA oder Bundesamt f&uuml;r Gesundheit/ BAG) von der Reisedurchf&uuml;hrung abgeraten wird
+            <li/>e) wenn der Ausfall &ouml; entlicher Transportmittel eine programmgem&auml;sse Fortsetzung der Reise innerhalb von 72 Stunden verunm&ouml;glichen (Mehrkosten, die aufgrund von Umleitungen und Versp&auml;tungen entstehen, sind nicht gedeckt)
+            <li/>f) wenn eine versicherte Person infolge Spitalaufenthalts die geplante R&uuml;ckreise nicht planm&auml;ssig antreten kann
+        </ul>
+    </div>
+
+    <a name="no-benefits"></a>
+    <button class="accordion active">Art. 3 Ausschl&uuml;sse</button>
+    <div class="panel" style="max-height: 510px;">
+            <ul style="list-style-type:none">
+                <li/><span style="background-color:#F0ADA2;"> 3.1   Keine Leistungen werden gew&auml;hrt f&uuml;r Erkrankungen und Unf&auml;lle als Folge von:</span>
+                <li/><span style="background-color:#F0ADA2;">a) nicht notfallm&auml;ssigen Erkrankungen und Unf&auml;llen</span>
+                <li/>b) Epidemien
+                <li/>c) voraussehbaren oder ausgebrochenen inneren Unruhen und kriegerischen Vorf&auml;llen
+                <li/>d) Teilnahme an Unruhen und Demonstrationen aller Art
+                <li/>e) Teilnahme an Rennen, Rallyes oder &auml;hnlichen Wett- und Trainingsfahrten mit Motorfahrzeugen oder Motorbooten
+                <li/>f) Konsum von Drogen, Bet&auml;ubungs- und Suchtmitteln sowie Alkohol- und Medikamentenmissbrauch
+                <li/>g) vors&auml;tzlich oder grobfahrl&auml;ssig begangener Verbrechen oder Vergehen
+                <li/>h) Selbstt&ouml;tungsversuchen auch im Zustand der Urteilsunf&auml;higkeit
+                <li/>3.2   Ferner sind Leistungen ausgeschlossen:
+                <li/>a) f&uuml;r Krankheiten, Unf&auml;lle und Schwangerschaften, die bereits bei Beginn der Versicherung bestanden haben; Ausnahme ist eine attestierte, unvorhergesehene akute Verschlechterung des Gesundheitszustandes
+                <li/>b) f&uuml;r die Behandlung, P ege oder Niederkunft im Ausland, wenn sich die versicherte Person zu diesem Zweck ins Ausland begeben hat
+                <li/>c) welche die orts&uuml;blichen Tarife &uuml;bersteigen oder nicht zweckm&auml;ssig sind
+                <li/>3.3   Werden der Nottransport oder die Repatriierung durch Streik, Unruhen, Radioaktivit&auml;t, h&ouml;here Gewalt oder andere &auml;hnliche Ursachen verunm&ouml;glicht, kann deren Organisation und Durchf&uuml;hrung nicht verlangt werden und es besteht kein Anspruch auf Leistungen.
+                <li/>3.4   Anspr&uuml;che auf Auslagen f&uuml;r den nicht ben&uuml;tzten Teil einer vorzeitig abgebrochenen Reise sind durch die PersonenAssistance nicht gedeckt.
+                <li/>3.5   Sch&auml;den, die entstehen, wenn die versicherten Personen die vorgeschriebenen minimalen Eincheckzeiten missachten und dadurch die Reise nicht angetreten oder fortgesetzt werden kann, sind durch die Personen-Assistance nicht gedeckt. 
+            </ul>
+    </div>
+
+    <button class="accordion">Art. 4 Zusammentre en mit Leistungen anderer Versicherungstr&auml;ger und Leistungen Dritter</button>
+    <div class="panel">
+            <ul style="list-style-type:none">
+                <li/>4.1   Die CSS &uuml;bernimmt im Sinne der Vorleistungsp icht die entstandenen Aufwendungen, sofern diese den Betrag von CHF 2500 &uuml;bersteigen (Selbstbehalte und Franchisen aus der schweizerischen obligatorischen Krankenp egeversicherung sind nicht mitversichert und unterliegen nicht der Vorleistungsp icht). Bei Betr&auml;gen unter CHF 2500 beh&auml;lt sich die CSS das Recht vor, diese zu Lasten eines leistungsp ichtigen Versicherers zur&uuml;ckzuweisen. Durch die CSS erbrachte Vorleistungen werden auf dem Regressweg bei einer anerkannten schweizerischen Krankenkasse, einem privaten schweizerischen Kranken- (Krankenpflege- und allf&auml;llige Zusatzversicherungen) oder Unfallversicherer geltend gemacht.
+                <li/>4.2   Weigert sich die Krankenkasse, der Kranken- oder Unfallversicherer der CSS die Leistungen aus den bestehenden Versicherungen zu erbringen, wird die versicherte Person gegen&uuml;ber der CSS f&uuml;r diejenigen Leistungen, welche der bestehende Versicherer nach dem Bundesgesetz &uuml;ber die Krankenversicherung (KVG) vom 18. M&auml;rz 1994, dem Bundesgesetz &uuml;ber die Unfallversicherung (UVG) vom 20. M&auml;rz 1981 oder dem VVG zu erbringen h&auml;tte, r&uuml;ckzahlungsp ichtig. Die R&uuml;ckzahlung hat innerhalb von 30 Tagen seit der Au orderung der CSS zu erfolgen. Bestehen keine solchen Versicherungen, leistet die CSS lediglich denjenigen Teil, welche die Leistungsp icht nach KVG oder UVG &uuml;bersteigt.
+            </ul>
+    </div>
+</div>
+</div>
+
+<div class="row">
+        <div class="col-md-8"> 
+    <h3 class="section">3.Teil Allgemeine Versicherungsbedingungen (AVB) f&uuml;r die Ausland-Rechtsschutz-Versicherung</h3>
+    
+    <button class="accordion">Art. 1 Ausland-Rechtsschutz-Versicherung</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Die CSS gew&auml;hrt in den nachstehenden F&auml;llen Rechtsschutz:
+            <li/>1.1   Ereignisse im Verkehr
+            <li/>W&auml;hrend der Hin-/R&uuml;ckreise und des Ferien- oder Schul- aufenthaltes im Ausland in der Eigenschaft als:
+            a) Lenker, Halter oder Eigent&uuml;mer des verwendeten Fahrzeuges und Mieter der im Ausland gemieteten Fahrzeuge b) Fussg&auml;nger, Radfahrer, Mofalenker oder Fahrgast in
+            einem Transportmittel
+            1.2   Ereignisse ausserhalb des Verkehrs
+            a) bei Personen- und/oder Sachsch&auml;den (gem. Art. 2.1) b) bei Streitigkeiten aus Reparatur- und Mietvertr&auml;gen (gem. Art. 2.2 lit. a)
+            <li/>c) bei Streit aus Reisevertr&auml;gen (gem. Art. 2.2 lit. b)
+            <li/>d) bei Aus&uuml;bung eines Hobbys oder Amateursports w&auml;hrend des Ferien- oder Schulaufenthalts im Ausland
+            <li/>e) beim Besuch einer Schule im Ausland (gem. Art. 2.2 lit. c)
+            <li/>f) beim Gebrauch einer Kreditkarte (gem. Art. 2.2 lit. d)
+        </ul>
+    </div>
+    
+    <button class="accordion">Art. 2 Die gedeckten Risiken im Einzelnen</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>2.1   Schadenersatz-Rechtsschutz
+            <li/>a) Geltendmachung von Schadenersatzanspr&uuml;chen infol-
+            ge eines erlittenen K&ouml;rper- oder Sachschadens durch ein Ereignis im oder ausserhalb des Verkehrs (gem. Art. 1.1 und 1.2).
+            <li/>b) Von der Versicherung ausgeschlossen sind Schadenersatzanspr&uuml;che aus Diebstahl, Entwendung, Verlust von Sachen und Missbrauch von Kreditkarten.
+            <li/>2.2   Vertrags-Rechtsschutz
+            <li/>a) Fahrzeugvertrags-Rechtsschutz
+            <li/>Vertretung bei Auseinandersetzungen aus Reparatur- und Mietvertr&auml;gen betre end das w&auml;hrend der Reise benutzte Fahrzeug. Ausgeschlossen sind Streitigkeiten
+            aus Kauf- und Leasingvertr&auml;gen.
+            <li/>b) Reisevertrags-Rechtsschutz
+            <li/>Vertretung bei Streitigkeiten aus Reisevertr&auml;gen mit einem in der Schweiz domizilierten Reiseb&uuml;ro, sofern der Gerichtsstand in der Schweiz liegt und schweizerisches Recht zur Anwendung kommt.
+            <li/>c) Schul-Rechtsschutz
+            <li/>Vertretung bei Auseinandersetzungen aus Vertr&auml;gen die Schulen im Ausland betre en, sofern der Gerichtsstand in der Schweiz liegt und schweizerisches Recht zur Anwendung kommt.
+            <li/>d) Kreditkarten-Rechtsschutz
+            <li/>Vertretung bei Streitigkeiten mit einem in der Schweiz domizilierten Kreditkartenunternehmen, sofern es sich nicht um Streitigkeiten &uuml;ber die Verletzung von Obliegenheiten aus dem Kreditkartenvertrag handelt und der Gerichtsstand in der Schweiz liegt und schweizerisches Recht zur Anwendung kommt.
+            <li/>2.3   Versicherungs-Rechtsschutz
+            <li/>Vertretung bei Streitigkeiten mit in der Schweiz konzessionierten privaten oder &ouml; entlichen Versicherungsan- stalten im Anschluss an einen Unfall im Ausland. &uuml;berdies wird Rechtsschutz gew&auml;hrt bei Streitigkeiten mit ausl&auml;ndischen Versicherungsgesellschaften aus der Miete von Motorfahrzeugen (Auto, Wohnmobil, Motorrad, Motorfahrrad, Motorboot u.a.) sowie nicht motorisierten Hobby-Sportger&auml;ten (Einschr&auml;nkungen siehe Art. 6).
+            <li/>2.4   Straf- und Verwaltungs-Rechtsschutz
+            <li/>Vertretung in einem Straf- und Administrativverfahren vor ausl&auml;ndischen Polizei- oder Strafgerichten sowie gegen&uuml;ber Administrativbeh&ouml;rden infolge des Vorwurfs fahrl&auml;ssiger Verletzung der ausl&auml;ndischen Gesetzgebung.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 3 Umfang der Rechtsschutzleistungen</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Umfang der Rechtsschutzleistungen
+            <li/>Die CSS &uuml;bernimmt bis zu einem Gesamtbetrag von max. CHF 250 000 (Europa) und CHF 50 000 (ausserhalb Europa), einschliesslich strafrechtlicher Kautionen, folgende Kosten pro Rechtsschutzfall:
+            <li/>a) die Kosten des Anwalts (d.h. Rechtsanwalt oder anderer Vertreter, der die Quali kation des auf das Verfahren anwendbaren Rechts erf&uuml;llt), der f&uuml;r den Versicherten t&auml;tig wird
+            <li/>b) die Kosten f&uuml;r Expertisen, die von der CSS, dem f&uuml;r den Versicherten t&auml;tigen Anwalt oder dem Gericht angeordnet werden
+            <li/>c) die Gerichtskosten und andere zu Lasten des Versicherten gehende Verfahrens- sowie Betreibungskosten
+            <li/>d) die in der Bussenverf&uuml;gung dem Versicherten auferlegten Kosten und Geb&uuml;hren; die Busse hingegen muss der Versicherte selbst tragen
+            <li/>e) die Prozesskosten der Gegenpartei, soweit der Versicherte zu deren Zahlung verp ichtet ist
+            <li/>f) vorschussweise die strafrechtlichen Kautionen bis CHF
+            <li/>100 000 (Europa) und CHF 50 000 (ausserhalb Europa), die dem Versicherten zur Abwendung der Untersuchungshaft in einem gedeckten Fall (vgl. Art. 2.4) auferlegt wurden; der Versicherte ist zur R&uuml;ckerstattung verp ichtet
+            <li/>g) die Kosten f&uuml;r das notwendige Erscheinen vor Gericht bis maximal CHF 1000
+            <li/>h) die notwendigen &uuml;bersetzungs- und Beglaubigungskosten
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 4 Definition Europa</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Definition Europa
+            <li/>Europa umfasst die L&auml;nder bis zum Ural sowie die Mittel- meerrandstaaten, die Kanarischen Inseln und Madeira.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 5 Zeitlicher Geltungsbereich</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Zeitlicher Geltungsbereich
+            <li/>Die Ausland-Rechtsschutz-Versicherung gilt f&uuml;r Schadenf&auml;lle, die innerhalb der f&uuml;r die Reiseversicherung gew&auml;hlten Dauer eintreten. Ein Rechtsschutz-Fall gilt bereits an dem Tag als eingetreten, an dem die tats&auml;chliche oder angebliche Verletzung von Rechtsvorschriften oder von vertraglichen P ichten begangen oder aber ein allf&auml;lliger Schaden verursacht worden ist.          
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 6 Ausschl&uuml;sse</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            Ausschl&uuml;sse
+            Kein Rechtsschutz wird gew&auml;hrt:
+            <li/>a) f&uuml;r F&auml;lle im Zusammenhang mit der vors&auml;tzlichen Begehung von Verbrechen, Vergehen und &uuml;bertretungen durch den Versicherten und dem Versuch dazu; bei Grobfahrl&auml;ssigkeit werden die Leistungen gek&uuml;rzt
+            <li/>b) bei der Geltendmachung von Schadenersatzanspr&uuml;chen von Drittpersonen gegen&uuml;ber dem Versicherten; Abweisung ist Sache einer allf&auml;lligen Haftp icht-Versicherung
+            <li/>c) f&uuml;r die Verteidigung des Versicherten in seiner Eigenschaft als Lenker des auf der Hin-/ R&uuml;ckreise oder w&auml;hrend des Ferien- oder Schulaufenthaltes im Ausland verwendeten Fahrzeuges, wenn er zur Zeit des Schadenereignisses nicht Inhaber eines g&uuml;ltigen Fahrausweises war
+            <li/>d) f&uuml;r die Vertretung des Versicherten im Falle eines Streites mit der Gesellschaft selbst, dem beauftragten Anwalt oder dem beigezogenen Sachverst&auml;ndigen
+            <li/>e) bei Streitigkeiten unter Versicherten aus dem gleichen Vertrag
+            <li/>f) bei aktiver Teilnahme des Versicherten an Rennen mit Motorfahrzeugen, Motorbooten und Flugger&auml;ten
+            <li/>g) f&uuml;r Schadenf&auml;lle, die aus Kriegen oder &auml;hnlichen Ereignissen sowie aus Unruhen herr&uuml;hren
+            <li/>h) bei Streitigkeiten im Zusammenhang mit der Ben&uuml;tzung von Wasser- oder Luftfahrzeugen, wenn f&uuml;r deren Lenken ein amtlicher Ausweis erforderlich ist
+            <li/>i) f&uuml;r vertraglich &uuml;bernommene P ichten (wie Selbstbehalte bei Vollkasko etc.)
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 7 Schadenregulierung und Beauftragung eines
+            Anwalts</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Schadenregulierung und Beauftragung eines Anwalts
+            <li/>7.1   Die Abwicklung der Leistungsf&auml;lle erfolgt durch die Orion Rechtsschutz-Versicherung AG, Aeschenvorstadt 50, 4051 Basel (nachfolgend Orion genannt). Nach &uuml;bergabe des Falles an Orion bestimmt diese &uuml;ber das weitere Vorgehen zu Gunsten des Versicherten. Sie f&uuml;hrt die Verhandlungen &uuml;ber eine g&uuml;tliche Erledigung und schl&auml;gt in geeigneten F&auml;llen eine Mediation vor. Sie entscheidet &uuml;ber den Beizug eines Anwaltes oder Mediators sowie &uuml;ber die Erstellung von Gutachten. Sie kann die Kostengutsprache inhaltlich und betraglich beschr&auml;nken. Der Versicherte verp ichtet sich, keinen Vertreter zu beauftragen, ohne vorg&auml;ngig von Orion eine Zustimmungserkl&auml;rung in Schriftform erhalten zu haben. Beauftragt der Versicherte vor der Fallanmeldung an Orion einen Anwalt bzw. Prozessbeistand oder einen Mediator, so sind dessen vor der Fallanmeldung entstandenen Kosten nur bis zu einem Betrag von CHF 300 versichert. Soweit nicht anders vereinbart, rechnet Orion mit dem Anwalt (auch bei einer gerichtlichen Auseinandersetzung) nach Aufwand ab. Vereinbart der Versicherungsnehmer mit dem Anwalt eine Erfolgspr&auml;mie, so wird diese von Orion nicht &uuml;bernommen. 
+            <li/>7.2   Orion hat das Recht, anstelle der Kosten&uuml;bernahme gem&auml;ss Art. 3 das wirtschaftliche Interesse ganz oder teilweise zu ersetzen. Dieses ergibt sich aus dem Streitwert unter angemessener Ber&uuml;cksichtigung des Prozess- und Inkassorisikos.
+            <li/>7.3   Orion gew&auml;hrt dem Versicherten die freie Anwaltswahl, falls im Hinblick auf ein Gerichts- oder Verwaltungsverfahren ein Vertreter eingesetzt werden muss sowie bei allf&auml;lligen Interessenkollisionen. Orion hat das Recht, einen vom Versicherten vorgeschlagenen Anwalt abzulehnen. Der Versicherte kann dann drei Anw&auml;lte aus verschiedenen Anwaltskanzleien innerhalb des Gerichtsstandes der Klage vorschlagen, aus welchen Orion den zu Beauftragenden ausw&auml;hlt. Dies gilt unabh&auml;ngig davon, ob eine P icht zur freien Anwaltswahl bestand oder Orion aus anderen Gr&uuml;nden einer Anwaltsbeauftragung zustimmte. Die Ablehnung eines Anwaltes muss nicht begr&uuml;ndet werden.
+            <li/>7.4   Der Versicherte oder sein Rechtsbeistand haben Orion die notwendigen Ausk&uuml;nfte und Vollmachten zu erteilen. S&auml;mtliche mit dem Fall zusammenh&auml;ngende Akten wie Bussenverf&uuml;gungen, Vorladungen, Urteile, Korrespondenzen usw. sind unverz&uuml;glich an Orion weiterzuleiten. Ist ein Anwalt beauftragt, hat der Versicherte diesen zu erm&auml;chtigen, Orion &uuml;ber die Entwicklung des Falles auf dem Laufenden zu halten und ihr insbesondere die zur Beurteilung der Versicherungsdeckung oder der Prozessaussichten n&ouml;tigen Unterlagen zur Verf&uuml;gung zu stellen. 
+            <li/>7.5   Vergleiche, die Verp ichtungen zu Lasten von Orion beinhalten, d&uuml;rfen vom Versicherten nur mit deren Zustimmung abgeschlossen werden.
+            <li/>7.6   Jede Prozess- oder Parteientsch&auml;digung, die dem Versicherten (gerichtlich oder aussergerichtlich) zugesprochen wird, f&auml;llt bis zur H&ouml;he der erbrachten Leistungen Orion zu.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 8 Meinungsverschiedenheiten</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>8.1   Bestehen Meinungsverschiedenheiten &uuml;ber das Vorgehen in einem gedeckten Rechtsfall oder &uuml;ber die Erfolgsaussichten des Rechtsfalles, so begr&uuml;ndet Orion unverz&uuml;glich in Schriftform ihre Rechtsau assung und weist den Versicherten gleichzeitig auf sein Recht hin, innerhalb von 20 Tagen ein Schiedsverfahren einzuleiten. Verlangt er innerhalb dieser Frist kein Schiedsverfahren, gilt dies als Verzicht. Ab Empfang dieser Mitteilung hat der Versicherte alle erforderlichen Massnahmen zur Wahrung seiner Interessen selbst zu tre en.
+            <li/>Orion ist f&uuml;r die Folgen mangelhafter Interessenvertretung, insbesondere verpasster Fristen nicht haftbar. Die Kosten dieses Schiedsverfahrens sind von den Parteien h&auml;lftig vorzuschiessen und gehen zulasten der unterliegenden Partei. Wird der Kostenvorschuss von einer Partei nicht geleistet, anerkennt diese damit die Rechtsau assung der Gegenpartei.
+            <li/>8.2   Die Parteien bestimmen gemeinsam einen Einzelschiedsrichter. Das Verfahren beschr&auml;nkt sich auf einen einmaligen Schriftenwechsel mit den begr&uuml;ndeten Antr&auml;gen und der Benennung der angerufenen Beweismittel der Parteien, auf dessen Grundlage der Schiedsrichter seinen Entscheid f&auml;llt. Im &uuml;brigen gelten die Bestimmungen der Schweizerischen Zivilprozessordnung (ZPO).
+            <li/>Leitet der Versicherte bei Ablehnung der Leistungsp icht auf eigene Kosten einen Prozess ein und erlangt er ein Urteil, das f&uuml;r ihn g&uuml;nstiger ausf&auml;llt als die ihm von Orion in Schriftform begr&uuml;ndete L&ouml;sung oder als das Ergebnis des Schiedsverfahrens, so &uuml;bernimmt Orion die dadurch entstandenen Kosten, wie wenn sie diesem zugestimmt h&auml;tte.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 9 Verletzung der Obliegenheiten durch den
+            Versicherten</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Bei schuldhafter Verletzung der Melde- und Mitwirkungsp ichten (z.B. bewusst unvollst&auml;ndige oder falsche Orientierung &uuml;ber den Sachverhalt) kann Orion ihre Leistungen ablehnen oder k&uuml;rzen. Dies auch, wenn daraus keine Mehrleistungsp icht f&uuml;r Orion resultiert.
+        </ul>
+    </div>
+</div>
+</div>
+
+<div class="row">
+        <div class="col-md-8"> 
+    <h3 class="section">4.Teil Allgemeine Versicherungsbedingungen (AVB) f&uuml;r die Reisegep&auml;ck-Versicherung</h4>
+    
+    <button class="accordion">Art. 1 Versicherte Sachen</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Versichert ist das Reisegep&auml;ck der versicherten Personen, d.h. alle jene Sachen f&uuml;r den pers&ouml;nlichen Bedarf, die auf Reisen mitgef&uuml;hrt oder einer Transportunternehmung zur Bef&ouml;rderung &uuml;bergeben werden.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 2 Versicherte Gefahren und Sch&auml;den</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Das Reisegep&auml;ck ist gegen die folgenden Gefahren und Sch&auml;den versichert:
+            <li/>a) Einbruchdiebstahl, Beraubung, einfacher Diebstahl
+            <li/>b) Besch&auml;digung
+            <li/>c) Verlust und Besch&auml;digung w&auml;hrend der Bef&ouml;rderung durch eine Transportunternehmung
+            <li/>d) Verlust durch Unfall des Transportmittels
+            <li/>e) versp&auml;tete Auslieferung durch eine Transportunternehmung (mindestens 6 Stunden)
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 3 Versicherungsleistungen</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Im Rahmen der vereinbarten Versicherungssumme werden folgende Leistungen erbracht:
+            <li/>a) bei Totalschaden wird der Betrag ersetzt, den die Neuanscha ung der versicherten Sachen erfordert. Ein pers&ouml;nlicher Liebhaber- oder Sammlerwert wird nicht ber&uuml;cksichtigt
+            <li/>b) bei Teilsch&auml;den: die Kosten f&uuml;r die Reparatur bis maximal zum Betrag einer gleichwertigen Neuanscha ung
+            <li/>c) die Ersatzkosten f&uuml;r die notwendige Neuanscha ung von Reisepass, Identit&auml;tskarte, F&uuml;hrer- und Fahrzeugausweis
+            <li/>d) die Kosten f&uuml;r unumg&auml;nglich notwendige Anscha ungen am Reisedomizil wegen versp&auml;teter Ablieferung des Reisegep&auml;cks durch eine Transportunternehmung bis zu 20% der Versicherungssumme. Bei Verlust oder Besch&auml;digung w&auml;hrend der Bef&ouml;rderung durch ein Transportunternehmen ist dieses vorleistungsp ichtig. Im Flugverkehr gilt das Montrealer Abkommen. Eine allf&auml;llige Entsch&auml;digung ist von der versicherten Entsch&auml;digung in Abzug zu bringen
+            <li/>e) bis 20 % der Versicherungssumme, h&ouml;chstens jedoch CHF 2000 f&uuml;r Bargeld, Fahrkarten und Flugtickets, sofern diese durch Einbruchdiebstahl oder Beraubung abhandengekommen sind
+            <li/>f) bis zu 50% der Versicherungssumme f&uuml;r die Gesamtheit folgender Sachen: Schmuck, das heisst mit oder aus Edelmetall, Edelsteinen oder Perlen angefertigte Sachen; Pelze; Foto-, Film-, Video- und Tonausr&uuml;stungen, jeweils samt Zubeh&ouml;r
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 4 Selbstbehalt</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Bei Sch&auml;den durch Diebstahl, Verlust oder Besch&auml;digung betr&auml;gt der Selbstbehalt in jedem Fall CHF 100. Er wird von der Entsch&auml;digung vor deren Ausrichtung abgezogen.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 5 Einschr&auml;nkungen</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>5.1   Nicht versicherte Sachen und Kosten sind:
+            <li/>a) Wertpapiere, Sparhefte, Urkunden, Dokumente und Kreditkarten
+            <li/>b) Portable Kommunikationsger&auml;te, Tablets, Desktop (PC) und portable Computer inkl. Zubeh&ouml;r sowie Software
+            <li/>c) Edelmetalle, lose Edelsteine und Perlen, Briefmarken, Handelswaren, Warenmuster, Gegenst&auml;nde mit Kunst oder Sammlerwert, Musikinstrumente und Berufswerkzeuge
+            <li/>d) Sehhilfen (Brillen und Kontaktlinsen), prothetische Hilfsger&auml;te, Prothesen
+            <li/>e) s&auml;mtliche Fahrzeuge, Schi e, Surfbretter und Luftfahrzeuge samt ihrem Zubeh&ouml;r
+            <li/>f) die mit einem Schadenereignis verbundenen Umtriebe
+            <li/>g) Fahrr&auml;der, Skis, Schlauch-, Falt-, Gummi- und Ruderboote gegen die Gefahren Diebstahl und Besch&auml;digung gem&auml;ss Art. 2 lit. a und b
+            <li/>h) Bargeld, Fahrkarten und Flugtickets (Ausnahme siehe
+            <li/>Art. 3 lit. e)
+            <li/>5.2   Nicht versichert sind Sch&auml;den:
+            <li/>a) die auf beh&ouml;rdliche Verf&uuml;gung, Streik oder kriegerische Ereignisse zur&uuml;ckzuf&uuml;hren sind
+            <li/>b) die durch Abn&uuml;tzung, die nat&uuml;rliche Bescha enheit des Gutes oder Temperatur- und Witterungsein &uuml;sse verursacht werden
+            <li/>c) die durch Liegenlassen, Verlegen oder Verlieren entstehen
+            <li/>d) die entstehen, weil die Art der Verwahrung dem Wert der Sachen nicht angemessen ist
+            <li/>e) an Sachen, die grobfahrl&auml;ssig an einem jedermann zug&auml;nglichen Ort, ausserhalb des direkten Ein ussbereiches der versicherten Person, sowie auf oder in unverschlossenen Fahrzeugen oder Booten - auch vor&uuml;bergehend - zur&uuml;ckgelassen werden
+            <li/>f) die durch Kernenergie verursacht werden
+            <li/>g) an Reisegep&auml;ck und Sportger&auml;ten durch deren Gebrauch
+        </ul>
+    </div>
+</div>
+</div>
+
+<div class="row">
+        <div class="col-md-8"> 
+    <h3 class="section">5.Teil Allgemeine Versicherungsbedingungen (AVB) f&uuml;r die Annullierungskosten-Versicherung</h3>
+
+    <button class="accordion">Art. 1 Beginn, Dauer und Voraussetzungen der Versicherung</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>a) In Ab&auml;nderung von Art. 3 des 1. Teils beginnt der Versicherungsschutz der Annullierungskosten-Versicherung bei Kurzfristversicherungen ab Einzahlung der Pr&auml;mie (Nachweis erforderlich) und erlischt nach Ablauf der gew&auml;hlten Vertragsdauer.
+            <li/>b) In Ab&auml;nderung von Art. 4 des 1. Teils beginnt der Versicherungsschutz der Annullierungskosten-Versicherung bei Jahresversicherungen bereits ab Vertragsabschluss. Dies gilt f&uuml;r Reisen ab dem in der Police genannten Versicherungsbeginn.
+            <li/>c) Versicherte Personen, die sich zum Zeitpunkt der Buchung und/oder Reise in medizinischer Behandlung be nden (ausgenommen davon sind regul&auml;re Kontrollen bei chronischen Erkrankungen) m&uuml;ssen vor Antritt der Reise ihre Reisef&auml;higkeit durch den behandelnden Arzt attestieren lassen.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 2 Versicherte Leistungen</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Pro versichertes Ereignis werden die folgenden Leistungen erbracht:
+            <li/>2.1   Vor der Abreise
+            <li/>Die e ektiv angefallenen, vertraglich geschuldeten Annullierungskosten, sofern hierf&uuml;r nicht der Veranstalter nach Pauschalreisegesetz haftet.
+            <li/>2.2   Bei versp&auml;tetem Antritt der Reise
+            <li/>a) R&uuml;ckverg&uuml;tung der bis zum Abreisetag nicht bezogenen Leistungen, bzw. die e ektiv angefallenen, vertraglich geschuldeten Annullierungskosten.
+            <li/>b) Entstehende Umbuchungskosten in Folge versp&auml;tetem Antritt.
+            <li/>2.3   Bei vorzeitigem Abbruch der Reise oder versp&auml;teter R&uuml;ckreise
+            <li/>a) R&uuml;ckverg&uuml;tung der nicht bezogenen Leistungen, bzw. die e ektiv angefallenen, vertraglich geschuldeten Annullierungskosten.
+            <li/>b) Sofern nicht bereits &uuml;ber die Personen-Assistance (2. Teil) versichert, werden bei vorzeitiger oder versp&auml;teter R&uuml;ckreise die Reisemehrkosten f&uuml;r Transport und Unterkunft (ohne Verp egung) bis max. 7 Tage sowie nachweisbare Kosten f&uuml;r unbedingt notwendige Telefonanrufe &uuml;bernommen. Die Reisemehrkosten werden in der H&ouml;he von max. CHF 2500 bei der EinzelpersonVersicherung und max. CHF 5000 bei der Zweipersonenhaushalt- und Mehrpersonenhaushalt-Versicherung erbracht. Die Versicherungsleistungen aus der Personen-Assistance- und Annullierungskostenversicherung sind nicht kumulierbar.
+            <li/>2.4   Versichert sind:
+            <li/>a) das gebuchte Ferienarrangement inklusive mehrt&auml;gige Sprach- und Ferienkursaufenthalte (ohne berufiche Ausund Weiterbildung)
+            <li/>b) die gebuchte Flug-, Bahn-, Car- oder Schi sreise
+            <li/>c) die Miete eines Hotelzimmers, einer Ferienwohnung/-haus, eines Bootes, Personenwagens, Motorrades oder Wohnmobils
+            <li/>d) Ticketkosten f&uuml;r Veranstaltungen sofern diese im Rahmen eines Arrangement (Transport- und oder Unterkunft) gebucht wurden
+            <li/>e) Umbuchungs-/Reisemehrkosten gem&auml;ss Art. 2.2 und 2.3
+            <li/>Die versicherten Leistungen sind limitiert durch die vertraglich geschuldeten Annullierungskosten, max. aber bis zur vereinbarten Versicherungssumme.
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 3 Anspruchsberechtigung</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Ein Anspruch besteht (abschliessende Aufz&auml;hlung), wenn:
+            <li/>a) die versicherte Person gem&auml;ss Art. 1 der Gemeinsamen Bedingungen (1. Teil) oder die mitreisende Person bzw. die nicht mitreisenden nahestehenden Personen nach Beginn der Versicherung ernsthaft erkranken, schwer verletzt werden, sterben oder bei diesen Personen eine &auml;rztlich attestierte Verschlimmerung eines chronischen
+            Leidens eintritt
+            <li/>b) die versicherte resp. mitreisende Person eine schwere
+            Schwangerschaftskomplikation erleidet
+            <li/>c) das von der versicherten Person ben&uuml;tzte &ouml; entliche Transportmittel (ausgenommen Taxi) zum Flughafen oder Abgangsbahnhof auf Schweizer Gebiet Versp&auml;tung hat oder ausf&auml;llt
+            <li/>d) das Eigentum der versicherten Person an ihrem Wohnort infolge eines Diebstahls, eines Wasser-, Feuer-, Erdbeben- oder Elementarschadens schwer beeintr&auml;chtigt wird
+            <li/>e) Streik oder Unruhen aller Art (Gewaltt&auml;tigkeiten gegen Personen oder Sachen wie beispielsweise von Zusammenrottung, Krawall, Tumult) ausserhalb der Schweiz oder Quarant&auml;ne, Epidemien, Erdbeben, vulkanische Eruptionen oder Elementarereignisse das Leben der versicherten Person gef&auml;hrden oder von o zieller schweizerischer Stelle (Eidgen&ouml;ssisches Departement f&uuml;r ausw&auml;rtige Angelegenheiten/EDA oder Bundesamt f&uuml;r Gesundheit/BAG) von der Reisedurchf&uuml;hrung abgeraten wird
+            <li/>f) die versicherte Person die Reise nicht antreten kann, weil sie eine neue Stelle antritt oder weil ihr Arbeitgeber den Arbeitsvertrag gek&uuml;ndigt hat. Die Anstellungsver- &auml;nderung muss f&uuml;r die versicherte Person unerwartet und nicht vorhersehbar gewesen sein. Bei der Buchung der Reise war dieser Umstand nicht bekannt. Eine Bef&ouml;rderung gilt nicht als eine neue Stelle
+            <li/>g) durch einen versicherten Diebstahl von notwendigen Ausweisen (Pass, ID etc.) allf&auml;llige Umbuchungskosten entstehen
+            <li/>h) die Reise aufgrund Nichtgew&auml;hrung der Ferien durch den Arbeitgeber infolge unabdingbarer Stellvertretung nicht angetreten werden kann
+        </ul>
+    </div>
+
+    <button class="accordion">Art. 4 Ausschl&uuml;sse</button>
+    <div class="panel">
+        <ul style="list-style-type:none">
+            <li/>Kein Anspruch auf Versicherungsleistungen besteht wenn:
+            <li/>a) das Ereignis oder das Leiden verursacht wird durch:
+            <li/>- vors&auml;tzliches oder grobfahrl&auml;ssiges Handeln oder Unterlassen der versicherten Person
+            <li/>- aktive Beteiligung an einem Streik oder Unruhen
+            <li/>- Konsum von Drogen, Bet&auml;ubungs- und Suchtmitteln sowie Alkohol- und Medikamentenmissbrauch
+            <li/>b) ein Ereignis oder ein Leiden zum Zeitpunkt der Bestellung der Versicherung bereits eingetreten oder aber f&uuml;r die versicherte Person erkennbar war
+            <li/>c) das Reiseunternehmen die Reise nicht durchf&uuml;hrt oder in Konkurs f&auml;llt
+            <li/>d) bei Annullierung bez&uuml;glich Art. 3 lit. a keine medizinische Indikation vorliegt und/oder wenn das Arztzeugnis nicht zum Zeitpunkt der erstm&ouml;glichen Feststellung der Reiseunf&auml;higkeit ausgestellt wurde
+            <li/>e) bei psychischen Erkrankungen kein Arztzeugnis eines Psychiaters vorliegt, mit welchem die ernsthafte Erkrankung diagnostiziert/best&auml;tigt wird
+            <li/>f) die versicherten Personen die vorgeschriebenen minimalen Eincheckzeiten missachten und dadurch die Reise nicht angetreten oder fortgesetzt werden kann
+        </ul>
+    </div>
+</div>
+</div>
+
+<div class="row">
+        <div class="col-md-4"> 
+        <button class="normalButton btn">Accept</button>
+        <button class="clarifyMeButton btn">Save in ClarifyMe portfolio</button>
+        </div>
+        <div class="col-md-4"> 
+        </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
